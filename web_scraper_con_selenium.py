@@ -12,5 +12,13 @@ s = BeautifulSoup(r.text, 'lxml')
 print(s.prettify())
 
 #Instanciar un driver del navegador
-driver = webdriver.Chrome(executable_path = '../chromedriver' )
+options = webdriver.ChromeOptions()
+options.add_argument('--incognito')
+driver = webdriver.Chrome(executable_path = '../chromedriver', options = options )
+
+#Make the browser load the web page
+driver.get(url)
+
 print('Hoka')
+
+driver.close()
