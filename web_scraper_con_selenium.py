@@ -11,4 +11,6 @@ print(r.status_code)
 s = BeautifulSoup(r.text, 'lxml')
 print(s.prettify())
 
+#Instanciar un driver del navegador
+driver = webdriver.Chrome(executable_path = '../chromedriver' )
 print('Hoka')
