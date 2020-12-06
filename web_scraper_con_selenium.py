@@ -28,9 +28,13 @@ print('**' * 5)
 vuelo = vuelos[0]
 print(vuelo)
 
+duracion = vuelo.find_element_by_xpath('.//span[@class = "duration"]/time/span').get_text()
 departure = vuelo.find_element_by_xpath('.//div[@class = "departure"]/time').get_attribute('datetime')
+arrival = vuelo.find_element_by_xpath(('.//div[@class = "arrival"]/time').get_attribute('datetime')
 
-print(departure)
+#print(duracion)
+#print(departure)
+#print(arrival)
 
 
-#driver.close()
+x = 5
