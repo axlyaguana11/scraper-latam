@@ -19,6 +19,18 @@ driver = webdriver.Chrome(executable_path = '../chromedriver', options = options
 #Make the browser load the web page
 driver.get(url)
 
-print('Hoka')
+#Extract info
+vuelos = driver.find_elements_by_xpath('//li[@class = "flight"]')
+print(vuelos)
 
-driver.close()
+print('**' * 5)
+
+vuelo = vuelos[0]
+print(vuelo)
+
+departure = vuelo.find_element_by_xpath('.//div[@class = "departure"]/time/@datetime')
+
+print(departure)
+
+
+#driver.close()
